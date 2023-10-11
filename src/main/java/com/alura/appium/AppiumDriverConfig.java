@@ -22,7 +22,8 @@ public class AppiumDriverConfig {
     }
     private AppiumDriverConfig() {
         DesiredCapabilities configuracoes = new DesiredCapabilities();
-        File apk = new File("D:\\Users\\London\\Documents\\Projetos\\AluraAppium\\src\\main\\resources\\alura_esporte.apk");
+        String caminhoApk = System.getProperty("user.dir")+"\\src\\main\\resources\\alura_esporte.apk";
+        File apk = new File(caminhoApk);
 
         configuracoes.setCapability(MobileCapabilityType.APP,apk.getAbsolutePath());
         configuracoes.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
