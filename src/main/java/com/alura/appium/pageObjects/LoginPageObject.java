@@ -31,6 +31,9 @@ public class LoginPageObject extends PageObjectsBase {
 
     @Override
     public void buscarElementos() {
+        WebDriverWait espera = new WebDriverWait(driver, 10);
+        espera.until(ExpectedConditions.presenceOfElementLocated(botaoCadastroID));
+
         botaoCadastro = (MobileElement) driver.findElement(botaoCadastroID);
         campoUsuario = (MobileElement) driver.findElement(campoUsuarioID);
         campoSenha = (MobileElement) driver.findElement(campoSenhaID);
