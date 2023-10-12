@@ -24,8 +24,8 @@ public class CadastroPageObjects extends PageObjectsBase {
         erroID = By.id("br.com.alura.aluraesporte:id/erro_cadastro");
         campoNomeID = By.id("br.com.alura.aluraesporte:id/input_nome");
         campoSenhaID = By.id("br.com.alura.aluraesporte:id/input_senha");
-        campoConfirmacaoID= By.id("br.com.alura.aluraesporte:id/input_confirmar_senha");
-        botaoCadastrarID= By.id("br.com.alura.aluraesporte:id/cadastro_usuario_botao_cadastrar");
+        campoConfirmacaoID = By.id("br.com.alura.aluraesporte:id/input_confirmar_senha");
+        botaoCadastrarID = By.id("br.com.alura.aluraesporte:id/cadastro_usuario_botao_cadastrar");
     }
 
     @Override

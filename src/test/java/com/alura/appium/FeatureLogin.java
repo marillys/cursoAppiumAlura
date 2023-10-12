@@ -1,6 +1,5 @@
 package com.alura.appium;
 
-import com.alura.appium.pageObjects.LoginPageObject;
 import com.alura.appium.pageObjects.ProdutosPageObject;
 import com.alura.appium.steps.CadastroStep;
 import com.alura.appium.steps.LoginStep;
@@ -19,15 +18,18 @@ public class FeatureLogin {
 
     @Test
     public void logar_usuario_cadastrado() {
+        String usuario = "Usuario_cadastrado";
+        String senha = "123";
+
         AppiumDriver driver = AppiumDriverConfig.Instance().driver;
         LoginStep loginStep = new LoginStep(driver);
-        CadastroStep cadastroStep = new CadastroStep();
+        CadastroStep cadastroStep = new CadastroStep(driver);
         ProdutosPageObject telaProdutos;
 
         loginStep.irPraCadastro();
-        cadastroStep.cadastrarUsuario("Marillys", "123", "123");
+        cadastroStep.cadastrarUsuario(usuario, senha, senha);
 
-        telaProdutos = loginStep.logar("Marillys", "123");
+        telaProdutos = loginStep.logar(usuario, senha);
         telaProdutos.buscarElementos();
     }
 }

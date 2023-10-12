@@ -1,6 +1,5 @@
 package com.alura.appium.steps;
 
-import com.alura.appium.AppiumDriverConfig;
 import com.alura.appium.pageObjects.CadastroPageObjects;
 import com.alura.appium.pageObjects.LoginPageObject;
 import com.alura.appium.pageObjects.ProdutosPageObject;
@@ -18,16 +17,18 @@ public class LoginStep {
     public CadastroPageObjects irPraCadastro() {
         telaLogin.buscarElementos();
         return telaLogin.irTelaCadastro();
-
-
     }
 
     public ProdutosPageObject logar(String usuario, String senha) {
         telaLogin.buscarElementos();
-        return telaLogin.logar("Marillys", "123");
+        return telaLogin.logar(usuario, senha);
     }
-    public String obterMensagemErro()
-    {
+
+    public String obterMensagemErro() {
         return telaLogin.mensagemErro();
+    }
+
+    public void consultarElementos() {
+        telaLogin.buscarElementos();
     }
 }
